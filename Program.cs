@@ -1,9 +1,7 @@
-﻿string orderStream = "B123,C234,A345,C15,B177,G3003,C235,B179";
-string[] items = orderStream.Split(",");
-Array.Sort(items);
-for (int i = 0; i < items.Length; i++) {
-    if (items[i].Length == 4)
-        Console.WriteLine(items[i]);
-    else
-        Console.WriteLine($"{items[i]}\t- Error");
-}
+﻿decimal price = 67.55m;
+decimal salePrice = 59.99m;
+
+string yourDiscount = String.Format("You saved {0:C2} off the regular {1:C2} price. ", (price - salePrice), price);
+
+yourDiscount += $"A discount of {((price - salePrice)/price):P2}!"; //inserted
+Console.WriteLine(yourDiscount);
